@@ -1,0 +1,694 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;  
+}
+html, body{
+    height: 100%;
+    width: 100%;
+}
+video{
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: +1;
+}
+#main{
+    position: relative;
+    overflow: hidden;
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background-color: rgba(163, 154, 154, 0.253);
+}
+#nav{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#nav img{
+    position: absolute;
+     width: 60px;
+    height: 60px;
+    top: 1%;
+    left: 3%;
+    scale: 0.9;
+    background-size: cover;
+   filter:contrast(2);
+   cursor: pointer;
+}
+#nav img:hover{
+    scale: 1.1;
+}
+#nav i{
+    margin-right: 20px;
+    font-size: 30px;
+    color: black;
+    font-weight: 500;
+    cursor: pointer;
+}
+#nav i:hover{
+   font-size: 32px;
+}
+
+#page1 h1{
+    position: relative;
+    top: 25%;
+    font-size: 120px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100%;
+   color: oldlace;
+    text-align: center;
+  /* -webkit-text-stroke: 4px black; */
+
+}
+#page1 h1::before{
+    content: "Discover Joy in Every Toy";
+    position: absolute;
+    background: url(https://images.unsplash.com/photo-1587654780291-39c9404d746b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80);
+    background-size: cover;
+    background-position: center;
+    background-clip: text;
+ -webkit-background-clip: text;
+    top: -6px;
+    left: -2px;
+    width: 100%;
+    z-index: -1; 
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+#button{
+    position: relative;
+    padding: 8px 40px;
+    font-size: 22px;
+    border-radius: 20px;
+    white-space: nowrap;
+    top: 30%;
+    left: 43%;
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid #0000003e;
+    color: #000;
+    font-weight: 500;
+}
+#button:hover{    
+    background: url(https://i.pinimg.com/236x/05/f3/a9/05f3a9f98c68c832d25843fda83b4f45.jpg);
+    background-size: cover;
+    background-position: center;
+    filter: blur(1);
+   border: none;
+}
+
+#page2{
+    height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* background: linear-gradient(to top, #D6DBE4,#F9FFFF, #DBE0E7); */
+    overflow: hidden;
+}
+#page2 h2{
+   text-align: center;
+   font-size: 70px;
+   position: relative;
+   
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   background: url(https://images.unsplash.com/photo-1558060370-d644479cb6f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1228&q=80);
+   background-size: cover;
+   background-position: center;
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+   padding-top: 10px;
+   text-transform: uppercase;
+   -webkit-text-stroke: 1px #000;
+}
+
+.age{
+    height: 44vh;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    border: 3px solid grey;
+    border-radius: 30px;
+}
+.age h3{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    top: -12%;
+    left: 78%;
+    padding-left: 20px;
+    z-index: 999;
+    width: 15%;
+    border-radius: 10px;
+    background-color: #EAEFF3;
+}
+.continer{
+    height: 100%;
+    width: 100%;position: relative;
+    /* background-color: red; */
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+}
+.card{
+    height:90%;
+    width: 18%;
+    background-color:  #eeee8c;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+.card img{
+    height: 70%;
+    width: 90%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.card h4{
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+}
+.category{
+    height: 44vh;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    border: 3px solid grey;
+    border-radius: 30px;
+}
+.category h3{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    top: -12%;
+    left: 73%;
+    padding-left: 20px;
+    z-index: 999;
+    width: 20%;
+    border-radius: 10px;
+    background-color: #EAEFF3;
+}
+.category .card{
+    background-color: #d2f7d1;
+}
+#page3{
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, #D6DBE4,#F9FFFF, #DBE0E7);
+    display: flex;
+}
+.text{
+    height: 100%;
+    width: 40%;
+    /* background-color: red; */
+}
+.text h1{
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    top: 10%;
+    color: #605c10;
+}
+.si{
+    height: 15%;
+    width:60%;
+    top: 18%;
+    left: 5%;
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+   align-items: center;
+   justify-content: space-around;
+}
+#one{
+    top: 18%;
+    left: 5%;
+    position: relative;
+    text-align: left;
+    /* background-color: red; */ 
+}
+
+.icon{
+    height: 60px;
+    width: 60px;
+    background-color: #79bcd2;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.icon i{
+   position: relative;
+    left: 18%;
+    top: 12%;
+    font-size: 40px;
+}
+.si h5{
+    font-size: 18px;
+}
+#two{
+    height: 15%;
+    width:60%;
+    top: 18%;
+    left: 5%;
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+   /* align-items: center; */
+   justify-content: space-around;
+}
+#three{
+    height: 15%;
+    width:60%;
+    top: 18%;
+    left: 5%;
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+   
+
+}
+.video{
+    height: 100%;
+    width: 60%;
+}
+.video video{
+    position: relative;
+    top: 15%;
+    border-radius: 10px;
+    height: 70%;
+    width: 90%;
+    z-index: 9;
+    cursor: pointer;
+}
+
+#page4{
+    height: 110vh;
+    width: 100%;
+    background: linear-gradient(to top, #D6DBE4,#F9FFFF, #DBE0E7);
+    position: relative;
+}
+.box{
+    position: relative;
+    left: 2%;
+    top: 1%;
+    height: 98%;
+    width: 96%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #00BFFF;
+    border-radius: 10px;
+}
+.boxs{
+    height: 50%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#box1{
+    height: 50%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly; 
+}
+.cards{
+    position: relative;
+    height:45vh;
+    width: 18%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+.cards h5{
+  
+    font-size: 20px;
+    color: #000;
+    
+}
+#o{
+    background: url("https://5.imimg.com/data5/YL/WP/RE/SELLER-77380661/educational-toys.jpg");
+    background-size: cover;
+}
+#t{
+    background: url("https://i.pinimg.com/originals/f9/08/cd/f908cd25a268eec4bb0e072e6aa4d70c.jpg");
+    background-position: center;
+    background-size: cover;
+}
+#th{
+    background: url("https://m.media-amazon.com/images/I/81pljgaLAxL.jpg");
+    background-size: cover;
+}
+#four{
+    background: url("https://cdn.thewirecutter.com/wp-content/media/2020/10/giftguide2020-kid5-2048px-clixorainbow.jpg");
+    background-size: cover;
+}
+#five{
+    background: url("https://rukminim2.flixcart.com/image/850/1000/kt7jv680/learning-toy/o/s/h/soft-baby-cloth-book-comfortable-infant-kids-early-development-original-imag6myzk8kc2ufj.jpeg?q=90");
+    background-size: cover;
+}
+#six{
+    background: url('https://img.fruugo.com/product/3/41/611286413_max.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#seven{
+    background: url("https://img.fruugo.com/product/2/44/460445442_max.jpg");
+    background-size: cover;
+}
+#eight{
+    background: url("https://i.pinimg.com/564x/c5/ba/f2/c5baf277530ad9ab94c36399624f779f.jpg");
+    background-size: cover;
+}
+#nine{
+    background: url("https://i.pinimg.com/564x/59/af/73/59af732382bace8ad23ae70d9e225717.jpg");
+    background-size: cover;
+}
+#ten{
+    background: url("https://rukminim2.flixcart.com/image/850/1000/kx9as280/outdoor-toy/1/l/k/3-jumbo-size-extremely-light-weight-kids-play-tent-house-for-3-original-imag9rbsfn6gje5v.jpeg?q=90");
+    background-size: cover;
+}
+.layer{
+    height: 100%;
+    width: 100%;
+    background-color:#43414188;
+    scale: 0.8;
+    opacity: 0;
+    transition: all linear 0.3s;
+    animation: ease-in-out;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+}
+.layer h5{
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+}
+.layer h6{
+    font-size: 15px;    
+    text-align: center;
+    color: #fff;
+}
+.cards:hover .layer{
+    opacity: 1;
+    scale: 1;
+    transition: all linear 0.3s;
+}
+#page6{
+    height: 110vh;
+    width: 100%;
+    background: linear-gradient(to top, #D6DBE4,#F9FFFF, #DBE0E7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cart{
+    height: 52vh;
+    width: 22%;
+    margin-top: 5px;
+    margin-left: 20px;
+    /* background-color: #06d6a0; */
+    border-radius: 10px;
+}
+.image{
+    height: 60%;
+    width: 100%;
+    animation: ease-in;
+    cursor: pointer;
+}
+.image img{
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+    opacity: 0;
+}
+#fr{
+    background: url(https://www.melissaanddoug.com/cdn/shop/files/2023-07-24_7ecd1fba-e466-49e7-9b24-27050d6a8f91.jpg?v=1690238240&width=670);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+#se{
+    background: url(https://www.melissaanddoug.com/cdn/shop/files/61e51dbd09e8696fa5175759655d0788c0438baa.jpg?v=1690238306&width=670);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;   
+}
+#thir{
+    background: url(https://images-cdn.ubuy.co.in/633fff0f896b4707b5675461-temi-toddler-toys-for-3-4-5-6-years-old.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;  
+}
+#for{
+    background: url(https://i.pinimg.com/564x/69/95/ba/6995ba0073f2388b5bc1fc327ad74e22.jpg);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center; 
+}
+#fiv{
+   background: url(https://m.media-amazon.com/images/I/71KkV4SFODL._AC_UF1000,1000_QL80_.jpg);
+   background-size: cover;
+   object-fit: cover;
+   background-position: center; 
+}
+#si{
+    background: url(https://www.melissaanddoug.com/cdn/shop/products/Giraffe-Plush-002106-1-Detail-Photo.jpg?v=1664897402&width=67000);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+#seve{
+    background: url(https://www.melissaanddoug.com/cdn/shop/products/Top-Bake-Pizza-Counter-009465-1-Pieces-Out.jpg?v=1664910019&width=670);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+#eig{
+    background: url(https://www.melissaanddoug.com/cdn/shop/products/Shape-Sorting-Cube-000575-1-Pieces-Out_ebbb220f-7e4a-4e01-9280-c3ffb86420a7.jpg?v=1666634715&width=670);
+    background-size: cover;
+    object-fit: cover;
+    background-position: center;
+}
+.image:hover img{
+    opacity: 1;
+}
+.buttons{
+    font-size: 20px;
+    text-align: center;
+}
+.buttons h5{
+   margin-top: 10px;
+}
+.buttons h6{
+    font-size: 20px;
+    margin-top: 2px;
+    color: #3D6EB6;
+}
+.btn{
+    margin-top: 3px;
+}
+.btn button{
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 15px;
+    background-color: #9CB6DE;
+    border: none;
+    cursor: pointer;
+}
+#info{
+    background-color: transparent; 
+    border: 2px solid #7f8ca0;
+}
+#info:hover{
+    border: none;
+    background-color: #788ba8;
+}
+#add:hover{
+    border: 2px solid #8e9fb6;
+    background-color: transparent;
+}
+#page5{
+    height: 100vh;
+    width: 100%;
+    /* background-color: #06d6a0; */
+    background: linear-gradient(to top, #D6DBE4,#F9FFFF, #DBE0E7);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.topre{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.topre h1{
+    position: relative;
+   padding-top: 10px;
+   font-size: 45px;
+   color: #474300;
+}
+#wrap{
+    height: 80%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    animation: ease-in-out;
+}
+.swiper {
+    width: 94%;
+    height: 90%;
+   position: relative;
+   top: 5%;
+   cursor: pointer;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    /* background-color: rgb(245, 209, 209); */
+    /* background:rgb(255, 217, 167) ; */
+    background: linear-gradient(#5390d9, #56cfe1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    color: #fff;
+    box-shadow: 0px 2px 2px 2px black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.swiper-slide p {
+    text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 9%;
+    text-align: left;
+    font-size: 20px;
+}
+
+.swiper-slide img {
+    height: 25%;
+    width: 25%;
+    /* background-size: cover; */
+    object-fit: cover;
+    position: absolute;
+    left: 7%;
+    top: 60%;
+    border-radius: 50%;
+}
+
+.swiper-slide h2 {
+    position: absolute;
+    font-size: 20px;
+    left: 40%;
+    padding-top: 175px;
+}
+
+.swiper-slide h3 {
+    position: absolute;
+    font-size: 15px;
+    left: 40%;
+    color: rgb(220, 215, 215);
+    padding-top: 180px;
+}
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+}
+.down{
+    height: 18%;
+    width: 100%;
+    position: relative;
+    display: flex;
+    /* background-color:#FAFA33; */
+    background: linear-gradient(to right, #D6DBE4,#F9FFFF, #DBE0E7);
+  }
+  .down .icons{
+    position: relative;
+    display: flex;
+    justify-content: center;
+   width: 100%;
+    top: 30%;
+    gap: 20px;
+  }
+  .icons i{
+    color: #000;
+    font-size: 2vw;
+    height: 25%;
+    width: 5%;
+    display: flex;
+    border-right: 2px solid #d2d2d2dc;
+    cursor: pointer;
+  }
+  .icons i:hover{
+     font-size: 2.5vw;
+  }
+  #last{
+    position: relative;
+    height: 22%;
+    width: 100%;
+    display: flex;
+    gap: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, #D6DBE4,#F9FFFF, #DBE0E7);
+  }
+  #last h5{
+    font-size: 1.5vw;
+    position: relative;
+    left: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 5%;
+  }
+  #last h6{
+    margin-top: 30px;
+    font-size: 1vw;
+    color: #000;
+    font-weight: 150;
+  }
+  
+
+
+
+  
